@@ -55,5 +55,48 @@ int main() {
    cout << "Company Name: " << card4.companyName << "\nCompany Address: " << card4.companyAddress << "\nPhone Number: " << card4.phoneNumber << "\nWorking Hours: " << card4.workingHours << "\nContact Person: " << card4.contactPerson << "\nPrice Quoted: $" << fixed << setprecision(2) << card4.priceQuoted << endl;
    cout << "----------------------------------------------" << endl;
    cout << "Company Name: " << card5.companyName << "\nCompany Address: " << card5.companyAddress << "\nPhone Number: " << card5.phoneNumber << "\nWorking Hours: " << card5.workingHours << "\nContact Person: " << card5.contactPerson << "\nPrice Quoted: $" << fixed << setprecision(2) << card5.priceQuoted << endl;
-   return 0;
+    cout << "----------------------------------------------" << endl;
+    
+     // Determine the lowest price quoted
+     double bestPrice = card1.priceQuoted;
+    
+     if (card2.priceQuoted < bestPrice) {
+          bestPrice = card2.priceQuoted;
+     }
+     if (card3.priceQuoted < bestPrice) {
+          bestPrice = card3.priceQuoted;
+     }
+     if (card4.priceQuoted < bestPrice) {
+          bestPrice = card4.priceQuoted;
+     }
+     if (card5.priceQuoted < bestPrice) {
+          bestPrice = card5.priceQuoted;
+     }
+    
+     cout << "Lowest price quoted: $" << fixed << setprecision(2) << bestPrice << endl;
+   
+
+     // Determine the lowest price quoted and the corresponding company
+     string bestCompany = card1.companyName;
+     bestPrice = card1.priceQuoted;
+        if (card2.priceQuoted < bestPrice) {
+            bestPrice = card2.priceQuoted;
+            bestCompany = card2.companyName;
+        }
+        if (card3.priceQuoted < bestPrice) {
+            bestPrice = card3.priceQuoted;
+            bestCompany = card3.companyName;
+        }
+        if (card4.priceQuoted < bestPrice) {
+            bestPrice = card4.priceQuoted;
+            bestCompany = card4.companyName;
+        }
+        if (card5.priceQuoted < bestPrice) {
+            bestPrice = card5.priceQuoted;
+            bestCompany = card5.companyName;
+        }
+    
+    cout << "Lowest price quoted by: " << bestCompany << endl;
+
+    return 0;
 }
