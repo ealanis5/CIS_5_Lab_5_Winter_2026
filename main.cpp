@@ -1,12 +1,11 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include <ctime>
 #include <iomanip>
 
 using namespace std;
 
-// Create structure for Buisness Card 
+// Structure for Business Card 
 struct BusinessCard {
     string companyName;
     string companyAddress;
@@ -29,7 +28,7 @@ BusinessCard createBusinessCard(const string& n, const string& a, const string& 
 };
 
 int main() {
-   // Seed the random number generator for priceQuoted
+   // Seed random number generator for priceQuoted
    srand(time(nullptr));
 
    double randomPrice1 = rand() % 1000 + 1000;
@@ -57,7 +56,7 @@ int main() {
    cout << "Company Name: " << card5.companyName << "\nCompany Address: " << card5.companyAddress << "\nPhone Number: " << card5.phoneNumber << "\nWorking Hours: " << card5.workingHours << "\nContact Person: " << card5.contactPerson << "\nPrice Quoted: $" << fixed << setprecision(2) << card5.priceQuoted << endl;
     cout << "----------------------------------------------" << endl;
     
-     // Determine the lowest price quoted
+     // If statement to determine the lowest price quoted
      double bestPrice = card1.priceQuoted;
     
      if (card2.priceQuoted < bestPrice) {
@@ -76,7 +75,7 @@ int main() {
      cout << "Lowest price quoted: $" << fixed << setprecision(2) << bestPrice << endl;
    
 
-     // Determine the lowest price quoted and the corresponding company
+     // If statement to determine the lowest price quoted and the corresponding company
      string bestCompany = card1.companyName;
      bestPrice = card1.priceQuoted;
         if (card2.priceQuoted < bestPrice) {
